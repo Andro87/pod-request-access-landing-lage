@@ -1,0 +1,68 @@
+@import "./variable.scss";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: "chivo";
+    src: url("../public/fonts/Chivo-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "chivo";
+    src: url("../public/fonts/Chivo-Regular.ttf");
+    font-weight: 400;
+}
+:root {
+    --Green: hsla(157, 74%, 62%, 1);
+    --LightGreen: hsla(157, 100%, 85%, 1);
+    --LightDark: hsla(225, 26%, 23%, 1);
+    --Dark: hsla(224, 35%, 11%, 1);
+    --White: hsla(0, 0%, 100%, 1);
+    --Lila: hsla(225, 21%, 45%, 1);
+    --LightLila: hsla(225, 40%, 83%, 1);
+    --Red: hsla(0, 96%, 61%, 1);
+}
+html {
+    font-size: 18px;
+}
+body {
+    font-family: "chivo";
+    font-weight: 300;
+}
+h1 {
+    font-family: "chivo";
+    font-weight: 300;
+    color: var(--Green);
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    span {
+        color: var(--White);
+    }
+    margin-top: 57px;
+    margin-bottom: 16px;
+    @media screen and (min-width: $tablet) {
+        font-size: 2.7rem;
+        line-height: 3.1rem;
+        margin-top: 90px;
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+        font-size: 2.9rem;
+        line-height: 3.4rem;
+        margin-top: 88px;
+        margin-bottom: 24px;
+    }
+}
+p {
+    font-size: 0.83rem;
+    line-height: 1.4rem;
+    color: var(--LightLila);
+
+    @media screen and (min-width: $tablet) {
+        font-size: 1rem;
+        line-height: 1.56rem;
+    }
+}
