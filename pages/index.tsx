@@ -18,10 +18,14 @@ export default function Home() {
             </Head>
 
             <div className={styles.container}>
-                <header className={styles.header} role="banner">
+                <header className={styles.header}>
                     <img src="/images/desktop/logo.svg" alt="logo" />
                 </header>
-                <picture className={styles.picture}>
+                <picture
+                    className={styles.picture}
+                    role="img"
+                    aria-label="image host"
+                >
                     <source
                         srcSet="/images/desktop/image-host.jpg"
                         media="(min-width:950px)"
@@ -33,7 +37,7 @@ export default function Home() {
                     <img src="/images/tablet/image-host.jpg" alt="" />
                 </picture>
 
-                <main className={styles.main} role="main">
+                <main className={styles.main}>
                     <h1>
                         PUBLISH YOUR PODCASTS <span>everywhere.</span>
                     </h1>
@@ -105,7 +109,7 @@ export default function Home() {
                 </main>
             </div>
 
-            <div className={styles.pattern}>
+            <div className={styles.pattern} role="presentation">
                 <img src="/images/desktop/bg-pattern-dots.svg" alt="" />
             </div>
         </div>
