@@ -20,10 +20,10 @@ export default function Home() {
             <div className={styles.container}>
                 <header className={styles.header}>
                     <img src="/images/desktop/logo.svg" alt="logo" />
-                </header>
+                </header>{" "}
                 <picture
                     className={styles.picture}
-                    role="img"
+                    role="region"
                     aria-label="image host"
                 >
                     <source
@@ -36,7 +36,6 @@ export default function Home() {
                     />
                     <img src="/images/tablet/image-host.jpg" alt="" />
                 </picture>
-
                 <main className={styles.main}>
                     <h1>
                         PUBLISH YOUR PODCASTS <span>everywhere.</span>
@@ -109,7 +108,7 @@ export default function Home() {
                 </main>
             </div>
 
-            <div className={styles.pattern} role="presentation">
+            <div className={styles.pattern} role="region" aria-label="pattern">
                 <img src="/images/desktop/bg-pattern-dots.svg" alt="" />
             </div>
         </div>
