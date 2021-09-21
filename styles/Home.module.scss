@@ -2,29 +2,29 @@
 
 .main_container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: var(--Dark);
     min-height: 100vh;
     @media screen and (min-width: $desktop) {
-        justify-content: center;
+        padding-top: 130px;
     }
 }
 .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     padding: 62px 24px 94px;
-    text-align: center;
     width: 100%;
     @media screen and (min-width: $tablet) {
-        padding: 50px 30px 0;
-        text-align: start;
+        align-items: flex-start;
+        min-height: initial;
+        padding: 50px 95px 0 40px;
     }
     @media screen and (min-width: $desktop) {
         padding: 0;
-        width: 88%;
+        width: 90%;
         margin-left: auto;
-        margin-top: 130px;
     }
 
     &::before {
@@ -46,75 +46,76 @@
 
 .header {
     position: relative;
-    z-index: 2;
+    z-index: 4;
+    margin: auto;
     @media screen and (min-width: $tablet) {
+        margin: 0;
+        margin-right: auto;
         margin-bottom: 150px;
     }
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
         margin-bottom: 100px;
-        top: -25px;
-    }
-}
-
-.picture {
-    display: none;
-    @media screen and (min-width: $tablet) {
-        display: flex;
-
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        img {
-            width: 100%;
-            height: 100%;
-        }
+        top: -30px;
+        left: 0;
     }
 }
 
 .main {
-    position: relative;
-    z-index: 2;
-    p {
-        @media screen and (min-width: $tablet) {
-            width: 88%;
-        }
-        @media screen and (min-width: $desktop) {
-            width: 60%;
-        }
-    }
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 57px;
+
     @media screen and (min-width: $tablet) {
+        max-width: initial;
+        padding-top: 92px;
+        margin-top: 0;
+        text-align: start;
+        position: relative;
+        z-index: 3;
         background-color: var(--Dark);
-        width: 83%;
-        display: flex;
-        flex-direction: column;
-        z-index: 4;
     }
     @media screen and (min-width: $desktop) {
-        width: 64%;
+        padding-top: 80px;
+        width: 60%;
+    }
+    p {
+        margin-top: 16px;
+        margin-bottom: 30px;
+        @media screen and (min-width: $tablet) {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            max-width: 445px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-top: 24px;
+        }
     }
 }
-.wrap {
+
+.logo_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 33px;
     margin-bottom: 48px;
+    @media screen and (min-width: $tablet) {
+        order: 4;
+        margin-top: 64px;
+        margin-bottom: 0;
+        max-width: 540px;
+    }
+    @media screen and (min-width: $desktop) {
+    }
     img {
         height: 14px;
         width: auto;
+
         @media screen and (min-width: $tablet) {
             height: 20px;
         }
-    }
-    @media screen and (min-width: $tablet) {
-        order: 3;
-        margin-top: 0;
-        margin-bottom: 0;
-        width: 88%;
-    }
-    @media screen and (min-width: $desktop) {
-        width: 72%;
     }
 }
 .form {
@@ -123,26 +124,21 @@
 
     @media screen and (min-width: $tablet) {
         display: flex;
-        order: 2;
-        margin-top: 40px;
-        margin-bottom: 64px;
-        width: 88%;
+        order: 3;
+        max-width: 430px;
         background-color: var(--LightDark);
         padding: 4px;
         border-radius: 35px;
     }
-    @media screen and (min-width: $desktop) {
-        width: 60%;
-    }
+
     &:focus-within {
         outline: max(1px, 0.2em) solid var(--Green);
-        outline-offset: 0.3em;
     }
 }
 .input {
     width: 100%;
     background-color: var(--LightDark);
-    padding: 10px 32px;
+    padding: 15px 32px;
     border-radius: 35px;
     outline: none;
     border: none;
@@ -160,14 +156,14 @@
     font-family: "chivo";
     font-weight: 400;
     font-size: 0.8rem;
-    padding: 10px 32px;
+    padding: 15px 32px;
     border-radius: 35px;
     background-color: var(--Green);
     margin-top: 16px;
 
     @media screen and (min-width: $tablet) {
         margin-top: 0;
-        max-width: 162px;
+        max-width: 160px;
         padding: 14px 20px;
     }
 
@@ -176,18 +172,42 @@
         cursor: pointer;
     }
 }
+
+.picture_wrap {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    picture {
+        display: flex;
+    }
+    picture,
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .pattern {
     display: none;
     @media screen and (min-width: $tablet) {
         display: flex;
         position: relative;
         margin-top: 150px;
-        margin-right: auto;
+        margin-left: 40px;
     }
     @media screen and (min-width: $desktop) {
-        margin: 0;
+        justify-content: flex-end;
+        margin: initial;
         margin-left: auto;
-        transform: translateY(-50px);
+        transform: translateY(-52px);
+        z-index: 5;
     }
 }
 .error_message {

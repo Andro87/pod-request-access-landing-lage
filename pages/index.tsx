@@ -20,32 +20,17 @@ export default function Home() {
             <div className={styles.container}>
                 <header className={styles.header}>
                     <img src="/images/desktop/logo.svg" alt="logo" />
-                </header>{" "}
-                <picture
-                    className={styles.picture}
-                    role="region"
-                    aria-label="image host"
-                >
-                    <source
-                        srcSet="/images/desktop/image-host.jpg"
-                        media="(min-width:950px)"
-                    />
-                    <source
-                        srcSet="/images/tablet/image-host.jpg"
-                        media="(min-width:550px)"
-                    />
-                    <img src="/images/tablet/image-host.jpg" alt="" />
-                </picture>
+                </header>
                 <main className={styles.main}>
                     <h1>
-                        PUBLISH YOUR PODCASTS <span>everywhere.</span>
+                        PUBLISH YOUR PODCASTS <span>EVERYWHERE.</span>
                     </h1>
                     <p>
                         Upload your audio to Pod with a single click. We’ll then
                         distribute your podcast to Spotify, Apple Podcasts,
                         Google Podcasts, Pocket Casts and more!
                     </p>
-                    <div className={styles.wrap}>
+                    <div className={styles.logo_container}>
                         <img
                             src="/images/desktop/spotify.svg"
                             alt="spotify-logo"
@@ -106,11 +91,27 @@ export default function Home() {
                         ) : null}
                     </form>
                 </main>
+                <section
+                    className={styles.picture_wrap}
+                    aria-label="image host"
+                >
+                    <picture>
+                        <source
+                            srcSet="/images/desktop/image-host.jpg"
+                            media="(min-width:950px)"
+                        />
+                        <source
+                            srcSet="/images/tablet/image-host.jpg"
+                            media="(min-width:650px)"
+                        />
+                        <img src="/images/tablet/image-host.jpg" alt="" />
+                    </picture>
+                </section>
             </div>
 
-            <div className={styles.pattern} role="region" aria-label="pattern">
+            <section className={styles.pattern} aria-label="pattern">
                 <img src="/images/desktop/bg-pattern-dots.svg" alt="" />
-            </div>
+            </section>
         </div>
     );
 }
